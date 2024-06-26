@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  
+        uses: actions/checkout@v4  
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v4
         with:
           java-version: '17'  
           distribution: 'adopt'
@@ -30,7 +30,7 @@ jobs:
         continue-on-error: true  # Continue even if tests fail to ensure reports are generated
 
       - name: Upload JUnit test reports
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: junit-reports
           path: target/surefire-reports  # Path to the Surefire reports directory
