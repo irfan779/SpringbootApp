@@ -26,7 +26,7 @@ jobs:
         run: mvn clean package  
 
       - name: Run JUnit tests and generate reports
-        run: mvn test surefire-report:report  # Run JUnit tests and generate Surefire reports
+        run: mvn test surefire-report:report  # Run JUnit tests & generate Surefire reports
         continue-on-error: true  # Continue even if tests fail to ensure reports are generated
 
       - name: Upload JUnit test reports
